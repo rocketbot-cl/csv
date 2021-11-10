@@ -40,6 +40,9 @@ if module == "read":
 
     if not delimiter:
         delimiter = ","
+          
+    if delimiter == "\\t":
+        delimiter = "\t"
 
     if not encoding:
         encoding = "utf-8"
