@@ -24,11 +24,31 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-import csv
+import openpyxl
+import numpy
+import time
 
 """
     Obtengo el modulo que fueron invocados
 """
+def csv_read(path, encoding):
+    import csv
+    delimiter = GetParams("delimiter")
+    csv_result = []
+    with open(path, "r", encoding=encoding, ) as csv_file:
+        data = csv_file.read()
+        csv_file.close()
+    if (data.startswith(("'","\""))):
+        with open(path, "w", encoding=encoding, ) as csv_file:
+            csv_file.write(data.replace("\"", ""))
+            csv_file.close()
+        time.sleep(2)
+    
+    with open(path, "r", encoding=encoding, ) as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=delimiter)
+        for row in csv_reader:
+            csv_result.append(row)
+    return csv_result
 
 module = GetParams("module")
 
@@ -47,14 +67,9 @@ if module == "read":
     if not encoding:
         encoding = "utf-8"
     try:
-
-        csv_result = []
-        with open(path, encoding=encoding) as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=delimiter)
-            print(csv_reader)
-            for row in csv_reader:
-                csv_result.append(row)
-
+        
+        csv_result = csv_read(path, encoding)
+                
         if result:
             SetVar(result, csv_result)
     except Exception as e:
@@ -89,3 +104,29 @@ if module == "export":
         PrintException()
         raise e
 
+if module == "csvToxlsx":
+    path = GetParams("path")
+    delimiter = GetParams("delimiter")
+    encoding = GetParams("encoding")
+    path_xlsx = GetParams("path_xlsx")
+
+    if not delimiter:
+        delimiter = ","
+          
+    if delimiter == "\\t":
+        delimiter = "\t"
+
+    if not encoding:
+        encoding = "utf-8"
+    try:
+        csv_result = csv_read(path, encoding)
+        wb = openpyxl.Workbook()
+        sheet = wb.active
+        for row in csv_result:
+            sheet.append(list(row))
+        wb.save(path_xlsx)
+    except Exception as e:
+        print("\x1B[" + "31;40m" + str(e) + "\x1B[" + "0m")
+        PrintException()
+        raise e
+    

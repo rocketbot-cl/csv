@@ -184,6 +184,99 @@
       "windows": true,
       "mac": false,
       "docker": false
+    },
+    {
+      "es": {
+        "title": "Exportar CSV a XLSX",
+        "description": "Exporta archivo .csv a un archivo .xlsx",
+        "title_options": null,
+        "options": null
+      },
+      "en": {
+        "title": "Export CSV to XLSX",
+        "description": "Export CSV to xlsx",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "C:/User/Usuario/Folder/file.csv",
+              "en": "C:/User/Usuario/Folder/file.csv"
+            },
+            "title": {
+              "es": "Ruta del archivo CSV: ",
+              "en": "File CSV path:  "
+            },
+            "id": "path",
+            "css": "col-md-12 "
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": ",",
+              "en": ","
+            },
+            "title": {
+              "es": "Separador",
+              "en": "Delimiter"
+            },
+            "help": {
+              "es": "Por defecto,el separador es coma",
+              "en": "By default, delimiter is comma"
+            },
+            "id": "delimiter",
+            "css": "col-md-2 "
+          },
+          {
+            "type": "select",
+            "options": [
+              {
+                "title": "UTF-8",
+                "value": "utf-8"
+              },
+              {
+                "title": "LATIN-1",
+                "value": "latin-1"
+              }
+            ],
+            "title": {
+              "es": "Codificación",
+              "en": "Encoding"
+            },
+            "id": "encoding",
+            "css": "col-md-4"
+          },
+          {
+            "type": "file_new",
+            "placeholder": {
+              "es": "C:/User/Usuario/Folder/file.xlsx",
+              "en": "C:/User/Usuario/Folder/file.xlsx"
+            },
+            "title": {
+              "es": "Guardar en: ",
+              "en": "Save in:  "
+            },
+            "id": "path_xlsx",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM4NCAzODQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4NCAzODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBzdHlsZT0iZmlsbDojRUZFRUVFOyIgcG9pbnRzPSI3Miw4IDM3Niw4IDM3NiwyODAgMjgwLDM3NiA3MiwzNzYgIi8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNBQkFCQUI7IiBwb2ludHM9IjI4MCwyODAgMzc2LDI4MCAyODAsMzc2ICIvPgo8cmVjdCB4PSI4IiB5PSI4OCIgc3R5bGU9ImZpbGw6IzQ0OEU0NzsiIHdpZHRoPSIyNTYiIGhlaWdodD0iMTI4Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiMwMTAxMDE7IiBkPSJNNjQsMHY4MEgwdjE0NGg2NHYxNjBoMjI0bDk2LTk2VjBINjR6IE0xNiw5NmgyNDB2MTEySDE2Vjk2eiBNMjg4LDM2MS4zNzZWMjg4aDczLjM3NkwyODgsMzYxLjM3NnogICBNMzY4LDI3MmgtOTZ2OTZIODBWMjI0aDE5MlY4MEg4MFYxNmgyODhWMjcyeiIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNNzYuMzIsMTMwLjExMmMtMS4xODQtMi4yODgtMy4zNDQtMy40MjQtNi40OC0zLjQyNGMtMS43MjgsMC0zLjE1MiwwLjQ2NC00LjI3MiwxLjQwOCAgIGMtMS4xMiwwLjkyOC0yLDIuNDE2LTIuNjQsNC40OTZzLTEuMDg4LDQuOC0xLjM0NCw4LjE3NmMtMC4yNzIsMy4zNi0wLjM4NCw3LjQ3Mi0wLjM4NCwxMi4zMzZjMCw1LjE4NCwwLjE3Niw5LjM3NiwwLjUyOCwxMi41NzYgICBjMC4zMzYsMy4yLDAuODk2LDUuNjY0LDEuNjMyLDcuNDRzMS42NjQsMi45NiwyLjc4NCwzLjU1MmMxLjEyLDAuNjA4LDIuNDE2LDAuOTI4LDMuODg4LDAuOTI4YzEuMjE2LDAsMi4zNTItMC4yMDgsMy40MDgtMC42MjQgICBzMS45NjgtMS4yNDgsMi43MzYtMi40OTZjMC43ODQtMS4yNDgsMS4zOTItMy4wMDgsMS44MjQtNS4yOGMwLjQ0OC0yLjI3MiwwLjY3Mi01LjI2NCwwLjY3Mi04Ljk3Nkg5Mi40OCAgIGMwLDMuNjk2LTAuMjg4LDcuMjMyLTAuODY0LDEwLjU2cy0xLjY2NCw2LjI0LTMuMjE2LDguNzM2Yy0xLjU4NCwyLjQ4LTMuNzc2LDQuNDMyLTYuNjI0LDUuODRzLTYuNTQ0LDIuMTI4LTExLjA4OCwyLjEyOCAgIGMtNS4xNjgsMC05LjMxMi0wLjg0OC0xMi4zNjgtMi40OTZjLTMuMDcyLTEuNjY0LTUuNDI0LTQuMDY0LTcuMDU2LTcuMnMtMi42ODgtNi44OC0zLjE2OC0xMS4yMzIgICBjLTAuNDY0LTQuMzM2LTAuNzItOS4xNTItMC43Mi0xNC4zODRjMC01LjE4NCwwLjI1Ni05Ljk2OCwwLjcyLTE0LjM1MmMwLjQ4LTQuMzY4LDEuNTUyLTguMTQ0LDMuMTY4LTExLjI4ICAgYzEuNjQ4LTMuMTIsMy45ODQtNS41ODQsNy4wNTYtNy4zNDRjMy4wNTYtMS43NDQsNy4yLTIuNjQsMTIuMzY4LTIuNjRjNC45NDQsMCw4LjgxNiwwLjgsMTEuNjY0LDIuNCAgIGMyLjg0OCwxLjYsNC45NzYsMy42MzIsNi4zNjgsNi4wOTZzMi4zMDQsNS4xMiwyLjY0LDcuOTY4YzAuMzUyLDIuODQ4LDAuNTI4LDUuNTIsMC41MjgsOC4wMTZINzguMDggICBDNzguMDgsMTM2LDc3LjQ4OCwxMzIuMzY4LDc2LjMyLDEzMC4xMTJ6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTEyMS4wNzIsMTY3LjAwOGMwLDEuNiwwLjE0NCwzLjA1NiwwLjM4NCw0LjM1MmMwLjI3MiwxLjMxMiwwLjczNiwyLjQxNiwxLjQ0LDMuMzEyICAgYzAuNzA0LDAuOTEyLDEuNjY0LDEuNjE2LDIuODQ4LDIuMTI4YzEuMTY4LDAuNDk2LDIuNjcyLDAuNzY4LDQuNDQ4LDAuNzY4YzIuMTI4LDAsNC4wMTYtMC42ODgsNS43MTItMi4wNjQgICBjMS42OC0xLjM3NiwyLjU0NC0zLjUyLDIuNTQ0LTYuMzg0YzAtMS41MzYtMC4yMjQtMi44NjQtMC42MjQtMy45ODRjLTAuNDE2LTEuMTItMS4xMDQtMi4xMjgtMi4wNjQtMy4wMDggICBjLTAuOTc2LTAuOTEyLTIuMjQtMS43MTItMy43OTItMi40NDhzLTMuNTA0LTEuNDg4LTUuODA4LTIuMjU2Yy0zLjA1Ni0xLjAyNC01LjcxMi0yLjE2LTcuOTY4LTMuMzc2ICAgYy0yLjI0LTEuMi00LjExMi0yLjYyNC01LjYxNi00LjI3MmMtMS41MDQtMS42MzItMi42MDgtMy41Mi0zLjMxMi01LjY2NGMtMC43MDQtMi4xNi0xLjA1Ni00LjYyNC0xLjA1Ni03LjQ1NiAgIGMwLTYuNzg0LDEuODg4LTExLjgyNCw1LjY2NC0xNS4xNTJjMy43Ni0zLjMyOCw4Ljk2LTQuOTkyLDE1LjU1Mi00Ljk5MmMzLjA3MiwwLDUuOTA0LDAuMzM2LDguNDk2LDEuMDA4czQuODMyLDEuNzQ0LDYuNzIsMy4yNjQgICBjMS44ODgsMS41MDQsMy4zNiwzLjQyNCw0LjQxNiw1Ljc0NGMxLjA0LDIuMzM2LDEuNTg0LDUuMTM2LDEuNTg0LDguNHYxLjkyaC0xMy4yNDhjMC0zLjI2NC0wLjU3Ni01Ljc3Ni0xLjcxMi03LjU1MiAgIGMtMS4xNTItMS43NDQtMy4wNzItMi42NC01Ljc2LTIuNjRjLTEuNTM2LDAtMi44MTYsMC4yNC0zLjg0LDAuNjcyYy0xLjAwOCwwLjQ0OC0xLjg0LDEuMDQtMi40NDgsMS43NzZzLTEuMDI0LDEuNjE2LTEuMjQ4LDIuNTc2ICAgYy0wLjI0LDAuOTYtMC4zMzYsMS45NTItMC4zMzYsMi45NzZjMCwyLjEyOCwwLjQ0OCwzLjg4OCwxLjM0NCw1LjMyOGMwLjg5NiwxLjQ1NiwyLjgxNiwyLjc4NCw1Ljc2LDMuOTg0bDEwLjY1Niw0LjYwOCAgIGMyLjYyNCwxLjE1Miw0Ljc2OCwyLjM1Miw2LjQxNiwzLjYxNmMxLjY2NCwxLjI0OCwzLjAwOCwyLjU5MiwzLjk4NCw0LjAzMmMwLjk5MiwxLjQ0LDEuNjgsMy4wMDgsMi4wNjQsNC43NTIgICBjMC4zODQsMS43MTIsMC41NzYsMy42NDgsMC41NzYsNS43NDRjMCw3LjIzMi0yLjA5NiwxMi40OTYtNi4yODgsMTUuNzkyYy00LjE5MiwzLjI5Ni0xMC4wMzIsNC45Ni0xNy41Miw0Ljk2ICAgYy03LjgwOCwwLTEzLjM5Mi0xLjY5Ni0xNi43NjgtNS4wODhjLTMuMzYtMy4zOTItNS4wMjQtOC4yNTYtNS4wMjQtMTQuNTkydi0yLjc4NGgxMy44MjQgICBDMTIxLjA3MiwxNjUuMDA4LDEyMS4wNzIsMTY3LjAwOCwxMjEuMDcyLDE2Ny4wMDh6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTE4OS4zNDQsMTY4LjU0NGgwLjMwNGwxMC4xNzYtNTAuNjg4aDE0LjMyTDE5OC40LDE4Ni40aC0xNy43NmwtMTUuNzI4LTY4LjU0NGgxNC43ODQgICBMMTg5LjM0NCwxNjguNTQ0eiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=",
+      "module": "csvToxlsx",
+      "module_name": "CSV",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": false,
+      "windows": true,
+      "mac": false,
+      "docker": false
     }
   ]
 }
