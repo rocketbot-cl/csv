@@ -30,6 +30,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Ler CSV",
+        "description": "Leia um arquivo CSV e salve o conteúdo em uma variável",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -37,11 +43,18 @@
             "type": "file_select",
             "placeholder": {
               "es": "C:/User/Usuario/Folder/file.csv",
-              "en": "C:/User/Usuario/Folder/file.csv"
+              "en": "C:/User/Usuario/Folder/file.csv",
+              "pr": "C:/User/Usuario/Folder/file.csv"
             },
             "title": {
               "es": "Ruta del archivo: ",
-              "en": "File path:  "
+              "en": "File path:  ",
+              "pr": "Direção do arquivo"
+            },
+            "description": {
+              "es": "Direccion del archivo que contiene los datos",
+              "en": "Path of the file that contains the data",
+              "pr": "Direção do arquivo que contem os dados"
             },
             "id": "path",
             "css": "col-md-12 "
@@ -54,11 +67,18 @@
             },
             "title": {
               "es": "Separador",
-              "en": "Delimiter"
+              "en": "Delimiter",
+              "pr": "Separador"
             },
             "help": {
               "es": "Por defecto,el separador es coma",
-              "en": "By default, delimiter is comma"
+              "en": "By default, delimiter is comma",
+              "pr": "Por padrão, o separador é uma vírgula."
+            },
+            "description": {
+              "es": "Caracter que separa los campos",
+              "en": "Character that separates the fields",
+              "pr": "Caracter que separa os campos"
             },
             "id": "delimiter",
             "css": "col-md-2 "
@@ -77,7 +97,13 @@
             ],
             "title": {
               "es": "Codificación",
-              "en": "Encoding"
+              "en": "Encoding",
+              "pr": "Codificação"
+            },
+            "description": {
+              "es": "Codificación del archivo",
+              "en": "Encoding of the file",
+              "pr": "Codificação do arquivo"
             },
             "id": "encoding",
             "css": "col-md-4"
@@ -86,15 +112,23 @@
             "type": "input",
             "placeholder": {
               "es": "Result",
-              "en": "Result"
+              "en": "Result",
+              "pr": "Result"
             },
             "title": {
-              "es": "Nombre de la varible donde guardar contenido",
-              "en": "Variable where save content:  "
+              "es": "Nombre de la varible donde se guardara el contenido",
+              "en": "Name of the variable where the content will be saved",
+              "pr": "Nome da variável onde o conteúdo será salvo"
             },
             "help": {
               "es": "Nombre de variable sin llaves {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem chaves {}"
+            },
+            "description": {
+              "es": "Nombre de la variable donde guardar resultado obtenido",
+              "en": "Variable name where save the result obtained",
+              "pr": "Nome da variável onde salvar o resultado obtido"
             },
             "id": "result",
             "css": "col-md-6"
@@ -128,6 +162,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Exportar para CSV",
+        "description": "Exportar dados para um arquivo CSV",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -135,11 +175,18 @@
             "type": "input",
             "placeholder": {
               "es": "[[data, data], [data, data]]",
-              "en": "Result"
+              "en": "[[data, data], [data, data]]",
+              "pr": "[[data, data], [data, data]]"
             },
             "title": {
-              "es": "Dato a exportar",
-              "en": "Data to export:  "
+              "es": "Dato a exportar:",
+              "en": "Data to export:",
+              "pr": "Dados para exportar"
+            },
+            "description": {
+              "es": "Datos que seran exportados en un archivo CSV",
+              "en": "Data to export in a CSV file",
+              "pr": "Dados que serão exportados em um arquivo CSV"
             },
             "id": "data",
             "css": "col-md-10"
@@ -148,11 +195,18 @@
             "type": "input",
             "placeholder": {
               "es": ",",
-              "en": ","
+              "en": ",",
+              "pr": ","
             },
             "title": {
-              "es": "Delimitador",
-              "en": "Delimiter:  "
+              "es": "Delimitador:",
+              "en": "Delimiter:",
+              "pr": "Delimitador"
+            },
+            "description": {
+              "es": "Delimitador de campos",
+              "en": "Field delimiter",
+              "pr": "Delimitador de campos"
             },
             "id": "delimiter",
             "css": "col-md-1"
@@ -161,11 +215,18 @@
             "type": "file_new",
             "placeholder": {
               "es": "C:/User/Usuario/Folder/file.csv",
-              "en": "C:/User/Usuario/Folder/file.csv"
+              "en": "C:/User/Usuario/Folder/file.csv",
+              "pr": "C:/User/Usuario/Folder/file.csv"
             },
             "title": {
-              "es": "Ruta del archivo: ",
-              "en": "File path:  "
+              "es": "Ruta del archivo:",
+              "en": "File path:",
+              "pr": "Direção do arquivo"
+            },
+            "description": {
+              "es": "Ruta del archivo donde se guardarán los datos",
+              "en": "Path of the file where the data will be saved",
+              "pr": "Direção do arquivo onde os dados serão salvos"
             },
             "id": "path",
             "css": "col-md-12"
@@ -198,6 +259,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Export CSV to XLSX",
+        "description": "Export CSV to xlsx",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -211,6 +278,11 @@
               "es": "Ruta del archivo CSV: ",
               "en": "File CSV path:  "
             },
+            "description": {
+              "es": "Ruta donde se encuentra el archivo CSV",
+              "en": "Path of the CSV file",
+              "pr": "Direção do arquivo CSV"
+            },
             "id": "path",
             "css": "col-md-12 "
           },
@@ -223,6 +295,11 @@
             "title": {
               "es": "Separador",
               "en": "Delimiter"
+            },
+            "description": {
+              "es": "Caracter separador",
+              "en": "Delimiter character",
+              "pr": "Caracter separador"
             },
             "help": {
               "es": "Por defecto,el separador es coma",
@@ -247,6 +324,11 @@
               "es": "Codificación",
               "en": "Encoding"
             },
+            "description": {
+              "es": "Codificación del archivo",
+              "en": "Encoding of the file",
+              "pr": "Codificação do arquivo"
+            },
             "id": "encoding",
             "css": "col-md-4"
           },
@@ -259,6 +341,11 @@
             "title": {
               "es": "Guardar en: ",
               "en": "Save in:  "
+            },
+            "description": {
+              "es": "Ruta donde se guardará el archivo XLSX",
+              "en": "Path where the XLSX file will be saved",
+              "pr": "Direção onde o arquivo XLSX será salvo"
             },
             "id": "path_xlsx",
             "css": "col-md-12"
