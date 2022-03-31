@@ -27,6 +27,7 @@ import xlwings as xw
 import openpyxl
 import numpy as np
 import time
+import csv
 
 """
     Obtengo el modulo que fueron invocados
@@ -35,6 +36,8 @@ def csv_read(path, encoding):
     import csv
     delimiter = GetParams("delimiter")
     csv_result = []
+    if not delimiter:
+        delimiter = ","
     with open(path, "r", encoding=encoding, ) as csv_file:
         data = csv_file.read()
         csv_file.close()
