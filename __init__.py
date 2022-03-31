@@ -23,9 +23,9 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
     pip install <package> -t .
 
 """
-
+import xlwings as xw
 import openpyxl
-import numpy
+import numpy as np
 import time
 
 """
@@ -119,14 +119,25 @@ if module == "csvToxlsx":
     if not encoding:
         encoding = "utf-8"
     try:
-        csv_result = csv_read(path, encoding)
-        wb = openpyxl.Workbook()
-        sheet = wb.active
-        for row in csv_result:
-            sheet.append(list(row))
-        wb.save(path_xlsx)
+        try:
+            app = xw.App(visible=False)
+            book = xw.Book()
+            csv_result = csv_read(path, encoding)
+            book.sheets[0]["A1"].value = csv_result
+            book.save(path_xlsx)
+            book.close()
+            app.quit()
+        except:
+            PrintException()
+            app = openpyxl.Workbook()
+            sheet = app.active
+            csv_result = csv_read(path, encoding)
+            for row in csv_result:
+                sheet.append(row)
+            app.save(path_xlsx)
+            app.close()
+
     except Exception as e:
         print("\x1B[" + "31;40m" + str(e) + "\x1B[" + "0m")
         PrintException()
         raise e
-    
