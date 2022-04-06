@@ -24,8 +24,9 @@ Export data to CSV
 3. Export CSV to XLSX  
 Export CSV to xlsx  
 
-
-
+### Updates
+#### 06-Apr-2022
+- Add comand Export CSV to XLSX
 
 ----
 ### OS
