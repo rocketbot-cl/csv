@@ -1,10 +1,10 @@
 {
-  "author": "Danilo Toro >",
+  "author": "Danilo Toro",
   "description": "Módulo para el manejo de archivos CSV",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "MIT",
-  "homepage": "http://rocketbot.co/",
+  "homepage": "http://rocketbot.com/",
   "linux": true,
   "windows": true,
   "mac": true,
@@ -43,6 +43,10 @@
               "es": "Ruta del archivo: ",
               "en": "File path:  "
             },
+            "description": {
+              "es": "Ruta del archivo CSV a leer",
+              "en": "Path of CSV file to read"
+            },
             "id": "path",
             "css": "col-md-12 "
           },
@@ -56,6 +60,10 @@
               "es": "Separador",
               "en": "Delimiter"
             },
+            "description": {
+              "es": "Separador de columnas",
+              "en": "Delimiter of columns"
+            },
             "help": {
               "es": "Por defecto,el separador es coma",
               "en": "By default, delimiter is comma"
@@ -65,6 +73,7 @@
           },
           {
             "type": "select",
+            "placeholder": "UTF-8",
             "options": [
               {
                 "title": "UTF-8",
@@ -79,6 +88,10 @@
               "es": "Codificación",
               "en": "Encoding"
             },
+            "description": {
+              "es": "Codificación del archivo",
+              "en": "Encoding of file"
+            },
             "id": "encoding",
             "css": "col-md-4"
           },
@@ -91,6 +104,10 @@
             "title": {
               "es": "Nombre de la varible donde guardar contenido",
               "en": "Variable where save content:  "
+            },
+            "description": {
+              "es": "Nombre de la variable donde se guardará el contenido del archivo",
+              "en": "Variable name where save content"
             },
             "help": {
               "es": "Nombre de variable sin llaves {}",
@@ -141,6 +158,10 @@
               "es": "Dato a exportar",
               "en": "Data to export:  "
             },
+            "description": {
+              "es": "Datos que se exportarán a un archivo CSV",
+              "en": "Data to export to CSV"
+            },
             "id": "data",
             "css": "col-md-10"
           },
@@ -154,6 +175,10 @@
               "es": "Delimitador",
               "en": "Delimiter:  "
             },
+            "description": {
+              "es": "Delimitador de los datos",
+              "en": "Delimiter of the data"
+            },
             "id": "delimiter",
             "css": "col-md-1"
           },
@@ -166,6 +191,10 @@
             "title": {
               "es": "Ruta del archivo: ",
               "en": "File path:  "
+            },
+            "description": {
+              "es": "Ruta del archivo CSV a crear",
+              "en": "Path of the CSV file to create"
             },
             "id": "path",
             "css": "col-md-12"
