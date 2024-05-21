@@ -2,14 +2,14 @@
   "author": "Danilo Toro",
   "description": "Módulo para el manejo de archivos CSV",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "license": "MIT",
   "homepage": "http://rocketbot.com/",
   "linux": true,
   "windows": true,
   "mac": true,
   "docker": true,
-  "name": "csv",
+  "name": "CSV",
   "dependencies": {},
   "title": {
     "en": "CSV",
@@ -81,7 +81,7 @@
               },
               {
                 "title": "LATIN-1",
-                "value": "latin-1"
+                "value": "latin1"
               }
             ],
             "title": {
@@ -163,7 +163,7 @@
               "en": "Data to export to CSV"
             },
             "id": "data",
-            "css": "col-md-10"
+            "css": "col-md-6"
           },
           {
             "type": "input",
@@ -180,7 +180,35 @@
               "en": "Delimiter of the data"
             },
             "id": "delimiter",
-            "css": "col-md-1"
+            "css": "col-md-3"
+          },
+          {
+            "type": "select",
+            "placeholder": "UTF-8",
+            "options": [
+              {
+                "title": "UTF-8",
+                "value": ""
+              },
+              {
+                "title": "UTF-16",
+                "value": "utf-16"
+              },
+              {
+                "title": "LATIN-1",
+                "value": "latin1"
+              }
+            ],
+            "title": {
+              "es": "Codificación",
+              "en": "Encoding"
+            },
+            "description": {
+              "es": "Codificación del archivo",
+              "en": "Encoding of file"
+            },
+            "id": "encoding",
+            "css": "col-md-3"
           },
           {
             "type": "file_new",
