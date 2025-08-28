@@ -1,23 +1,23 @@
 # CSV
   
-Module for CSV file handling  
+Módulo para el manejo de archivos CSV  
 
 *Read this in other languages: [English](README.md), [Español](README.es.md).*
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Read CSV  
-Read a CSV File and add content to a variable
+1. Leer CSV  
+Lee un archivo CSV y guarda el contenido en una variable
 
-2. Export to CSV  
-Export data to CSV  
+2. Exportar a CSV  
+Exporta datos a un archivo CSV  
 
 
 

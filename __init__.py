@@ -31,7 +31,7 @@ import csv
 """
 
 module = GetParams("module")
-
+print(module)
 if module == "read":
     path = GetParams("path")
     result = GetParams("result")
@@ -66,20 +66,23 @@ if module == "export":
     path = GetParams("path")
     data = GetParams("data")
     delimiter = GetParams("delimiter")
+    encoding = GetParams("encoding")
 
     try:
+        if not encoding:
+            encoding = "utf-8"
+
         if not delimiter:
             delimiter = ","
+        
         data = eval(data)
-
         if type(data[0]) is tuple:
             print("Data is tuple")
             data = [list(da) for da in data]
         elif type(data[0]) is not list:
             print("Data is not list")
             data = [data]
-
-        with open(path, mode='w', newline='') as csv_file:
+        with open(path, mode='w', newline='',encoding=encoding) as csv_file:
             csv_writer = csv.writer(csv_file, delimiter=delimiter, quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for row in data:
                 print(row)
